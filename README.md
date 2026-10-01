@@ -23,4 +23,10 @@ Plugin SLiMS untuk pengesahan/verifikasi internal dokumen PDF menggunakan identi
 ## Routing AJAX SLiMS
 Seluruh form/action mempertahankan `mod` dan `id`. Upload PDF memakai FormData AJAX agar admin shell tidak berubah menjadi halaman `plugin_container.php` polos.
 
+## Tampilan
+<img width="1351" height="600" alt="image" src="https://github.com/user-attachments/assets/e63cd32a-9427-4748-b771-62fe3eefc61d" />
+<img width="1344" height="640" alt="image" src="https://github.com/user-attachments/assets/712ffef4-8aeb-49e5-b0c1-9d3406f7f521" />
+<img width="864" height="529" alt="image" src="https://github.com/user-attachments/assets/8d5eaf95-99f4-4cbb-97d5-748850332c1f" />
+
+
 
