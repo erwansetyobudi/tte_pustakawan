@@ -1,0 +1,9 @@
+{
+  "name": "slims/tte-pustakawan",
+  "description": "Plugin pengesahan PDF dengan QR verifikasi untuk SLiMS",
+  "require": {
+    "php": ">=7.4",
+    "tecnickcom/tcpdf": "^6.7",
+    "setasign/fpdi": "^2.6"
+  }
+}

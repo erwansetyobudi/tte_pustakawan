@@ -1,2 +1,26 @@
-# tte_pustakawan
-Fitur Tanda Tangan Elektronik Akun Pustakawan di SLiMS
+# Tanda Tangan Elektronik Pustakawan v1.0.0
+
+Plugin SLiMS untuk pengesahan/verifikasi internal dokumen PDF menggunakan identitas akun pustakawan yang login, QR Code, ID verifikasi, waktu tanda tangan, dan hash SHA-256.
+
+> Catatan: fitur ini adalah pengesahan/verifikasi dokumen internal. Ini bukan Tanda Tangan Elektronik Tersertifikasi PSrE.
+
+## Instalasi
+1. Ekstrak folder `tte_pustakawan` ke folder `plugins/` SLiMS.
+2. Dari terminal masuk ke `plugins/tte_pustakawan` lalu jalankan `composer install --no-dev` untuk memasang TCPDF + FPDI.
+3. Aktifkan plugin dari menu Sistem > Plugin. Migration otomatis membuat tabel `tte_documents`.
+4. Pastikan folder `storage/original` dan `storage/signed` dapat ditulis oleh web server.
+
+## Alur
+- Pustakawan login menggunakan akun SLiMS masing-masing.
+- Pilih Sistem > Tanda Tangan Elektronik > Tanda Tangani Dokumen.
+- Isi metadata dan unggah PDF.
+- Pilih halaman dan geser posisi QR pada simulasi halaman.
+- Klik Tandatangani Dokumen.
+- PDF final mendapat QR, nama akun, waktu, dan ID verifikasi.
+- QR mengarah ke `index.php?p=tte-validation&code=...` pada OPAC.
+- Halaman OPAC menampilkan metadata, status, penandatangan, waktu, dan SHA-256.
+
+## Routing AJAX SLiMS
+Seluruh form/action mempertahankan `mod` dan `id`. Upload PDF memakai FormData AJAX agar admin shell tidak berubah menjadi halaman `plugin_container.php` polos.
+
+
